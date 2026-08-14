@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Outfit:wght@300;400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+.prata-regular {
+  font-family: 'Prata', serif;
+}
+
+.luxury-heading {
+  font-family: 'Prata', serif;
+  letter-spacing: 0.05em;
+}
+
+.glass {
+  backdrop-filter: blur(10px);
+}
+
+.dark-theme {
+  background-color: #111827;
+  color: #f3f4f6;
+}
+
+.light-theme {
+  background-color: #ffffff;
+  color: #111827;
+}
