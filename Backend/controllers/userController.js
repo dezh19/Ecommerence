@@ -77,4 +77,14 @@ const adminLogin = async (req, res) => {
   }
 };
 
-export { registerUser, loginUser, adminLogin };
+const listUsers = async (req, res) => {
+  try {
+    const users = await userModel.find({}).select('-password -cartData').sort({ createdAt: -1 });
+    res.json({ success: true, users });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: error.message });
+  }
+};
+
+export { registerUser, loginUser, adminLogin, listUsers };

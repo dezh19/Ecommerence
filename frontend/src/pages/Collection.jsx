@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext'
 import { assets } from '../assets/assets'
 import Title from '../components/Title';
@@ -9,12 +10,12 @@ import ProductItem from '../components/ProductItem';
 const Collection = () => {
 
   const { products, search, showSearch } = useContext(ShopContext);
+  const [searchParams] = useSearchParams();
   const [showFilter, setShowFilter] = useState(false);
   const [filterProducts, setFilterProducts] = useState([]);
   const [category, setCategory] = useState([]);
   const [subCategory, setSubCategory] = useState([]);
   const [sortType,setSortType] = useState('relavent')
-  console.log(products)
 
   const toggleCategory = (e) => {
     if (category.includes(e.target.value)) {
@@ -74,10 +75,17 @@ const Collection = () => {
 //   }, [category, subCategory, search, showSearch, products]);
 
   useEffect(() => {
-    const savedFilters = JSON.parse(localStorage.getItem('filters')) || {};
-    setCategory(savedFilters.category || []);
-    setSubCategory(savedFilters.subCategory || []);
-    setSortType(savedFilters.sortType || 'relavent');
+    const categoryParam = searchParams.get('category');
+    if (categoryParam) {
+      setCategory([categoryParam]);
+      setSubCategory([]);
+      setSortType('relavent');
+    } else {
+      const savedFilters = JSON.parse(localStorage.getItem('filters')) || {};
+      setCategory(savedFilters.category || []);
+      setSubCategory(savedFilters.subCategory || []);
+      setSortType(savedFilters.sortType || 'relavent');
+    }
     setFilterProducts(products);
     applyFilter();
   }, []);

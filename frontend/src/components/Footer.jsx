@@ -1,37 +1,38 @@
 import React from 'react'
-import { assets } from '../assets/assets'
 
 const Footer = () => {
   return (
-    <div className='bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 text-white py-12 px-4 mt-20 min-h-[200px]'>
-        <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-12 my-8 text-base'>
+    <div className='mt-24 pt-16 pb-10 border-t border-luxury-gold/15'>
+        <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-12 mb-12'>
             <div>
-                <img src={assets.logo} className='mb-6 w-36 filter drop-shadow-lg' alt="" />
-                <p className='w-full md:w-2/3 text-yellow-100 text-base leading-relaxed'>
+                <p className='font-serif text-3xl text-luxury-gold mb-5 drop-shadow-[0_0_18px_rgba(214,179,106,0.25)]'>
+                  FOREVER<span className='text-luxury-goldLight'>.</span>
+                </p>
+                <p className='w-full md:w-2/3 text-luxury-ivory/50 text-sm leading-relaxed'>
                     Discover the latest in fashion with our premium collection. Elevate your style with timeless pieces crafted for the modern individual.
                 </p>
             </div>
 
             <div>
-                <p className='text-xl font-medium mb-6 luxury-heading animate-fade-in'>COMPANY</p>
-                <ul className='flex flex-col gap-3 text-yellow-100 text-base'>
-                    <li className='hover:text-yellow-200 transition duration-300 cursor-pointer hover:translate-x-2 transform'>Home</li>
-                    <li className='hover:text-yellow-200 transition duration-300 cursor-pointer hover:translate-x-2 transform'>About Us</li>
-                    <li className='hover:text-yellow-200 transition duration-300 cursor-pointer hover:translate-x-2 transform'>Delivery</li>
-                    <li className='hover:text-yellow-200 transition duration-300 cursor-pointer hover:translate-x-2 transform'>Privacy Policy</li>
+                <p className='luxury-eyebrow text-luxury-gold text-xs tracking-[0.25em] mb-6'>COMPANY</p>
+                <ul className='flex flex-col gap-3 text-luxury-ivory/60 text-sm'>
+                    <li className='hover:text-luxury-gold transition duration-300 cursor-pointer'>Home</li>
+                    <li className='hover:text-luxury-gold transition duration-300 cursor-pointer'>About Us</li>
+                    <li className='hover:text-luxury-gold transition duration-300 cursor-pointer'>Delivery</li>
+                    <li className='hover:text-luxury-gold transition duration-300 cursor-pointer'>Privacy Policy</li>
                 </ul>
             </div>
 
             <div>
-                <p className='text-xl font-medium mb-6 luxury-heading animate-fade-in'>GET IN TOUCH</p>
-                <ul className='flex flex-col gap-3 text-yellow-100 text-base'>
-                    <li className='hover:text-yellow-300 transition duration-300 cursor-pointer'>655-3698 / 659-2344</li>
-                    <li className='hover:text-yellow-300 transition duration-300 cursor-pointer'>CompaniesEmail@gmail.com</li>
+                <p className='luxury-eyebrow text-luxury-gold text-xs tracking-[0.25em] mb-6'>GET IN TOUCH</p>
+                <ul className='flex flex-col gap-3 text-luxury-ivory/60 text-sm'>
+                    <li className='hover:text-luxury-gold transition duration-300 cursor-pointer'>655-3698 / 659-2344</li>
+                    <li className='hover:text-luxury-gold transition duration-300 cursor-pointer'>CompaniesEmail@gmail.com</li>
                 </ul>
             </div>
         </div>
-        <div className='border-t border-yellow-300 pt-6'>
-               <p className='text-base text-center text-yellow-100'>Copyright 2025 company.com. All rights reserved</p>
+        <div className='border-t border-luxury-gold/10 pt-6'>
+               <p className='text-xs text-center tracking-[0.2em] text-luxury-ivory/30'>COPYRIGHT 2025 COMPANY.COM — ALL RIGHTS RESERVED</p>
             </div>
     </div>
   )

@@ -144,7 +144,7 @@ const getProductsData = async () => {
 
 const getUserCart = async () => {
     try {
-        const response = await axios.post(`${backendUrl}/api/cart/get`, {
+        const response = await axios.post(`${backendUrl}/api/cart/get`, {}, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -166,20 +166,25 @@ useEffect(() => {
 
 
 useEffect(() => {
-    
-    if (token && localStorage.getItem('token')) {
-        setToken(localStorage.getItem('token'));
-        getUserCart(localStorage.getItem('token'));
+    const storedToken = localStorage.getItem('token');
+    if (storedToken) {
+        setToken(storedToken);
     }
 }, []);
+
+useEffect(() => {
+    if (token) {
+        getUserCart();
+    }
+}, [token]);
 
     
 
 
     const value = {
         products, currency, delivery_fee,
-        search, setSearch, showSearch, 
-        setShowSearch, cartItems, addToCart, 
+        search, setSearch, showSearch,
+        setShowSearch, cartItems, setCartItems, addToCart,
         getCartCount, updateQuantity, getCartAmount, navigate, backendUrl,
         setToken,token
     };

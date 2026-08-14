@@ -8,13 +8,12 @@ const BestSeller = () => {
     const [bestSeller, setBestSeller] = useState([]);
 
     useEffect(() => {
-         console.log(products)
-        setBestSeller(products.filter((item) => (item.bestSeller)).slice(0, 5));
+        setBestSeller(products.filter((item) => (item.bestseller)).slice(0, 5));
     }, [products]);
 
     return (
-        <div className='my-10'>
-            <div className='text-center text-3xl py-8'>
+        <div className='my-16'>
+            <div className='text-center py-8'>
                 <Title text1={'BEST'} text2={'SELLERS'}/>
                 <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-yellow-700'>
                     Explore our bestselling fashion essentials.

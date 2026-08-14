@@ -19,8 +19,8 @@ import Login from './pages/Login';
 
 const App = () => {
   return (
-    <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
-      <ToastContainer />
+    <div className='min-h-screen bg-luxury-bg text-luxury-ivory px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] pt-28 sm:pt-32'>
+      <ToastContainer theme='dark' />
       <Navebar />
       <SearchBar />
       <Routes>
