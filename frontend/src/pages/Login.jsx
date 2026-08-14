@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react'
-import {useState, useContext} from 'react'
+import { useEffect, useState, useContext } from 'react'
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
 import { ShopContext } from '../context/ShopContext';
 import { toast } from 'react-toastify';
 

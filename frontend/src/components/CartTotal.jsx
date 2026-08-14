@@ -1,13 +1,11 @@
 
-import { useContext, useState } from 'react';
-import React from 'react'
+import { useContext } from 'react';
 import Title from './Title';
 import { ShopContext } from '../context/ShopContext';
 
 const CartTotal = () => {
 
     const {currency, delivery_fee, getCartAmount} = useContext(ShopContext);
-    const [cartData, setCartData] = useState([]);
   return (
     <div className='w-full '>
       <div className='text-2xl'>

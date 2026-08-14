@@ -59,7 +59,7 @@ const Orders = () => {
           <p className='text-luxury-ivory/50 py-8'>Please log in to view your orders.</p>
         )}
         {token && !loading && orderItems.length === 0 && (
-          <p className='text-luxury-ivory/50 py-8'>You haven't placed any orders yet.</p>
+          <p className='text-luxury-ivory/50 py-8'>You haven&apos;t placed any orders yet.</p>
         )}
         {orderItems.map((item, index) => (
           <div key={index} className='py-4 border-t border-b border-luxury-gold/10 text-luxury-ivory/80 flex flex-col md:flex-row md:items-center md:justify-between gap-4'>

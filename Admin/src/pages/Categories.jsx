@@ -17,7 +17,7 @@ const Categories = () => {
         </div>
         <p className='luxury-eyebrow text-luxury-rose text-xs mb-2'>COMING SOON</p>
         <p className='text-luxury-ivory/80 max-w-md mx-auto'>
-          Category management — creating, editing, and reordering collection groups — isn't built yet.
+          Category management — creating, editing, and reordering collection groups — isn&apos;t built yet.
           Products currently use the fixed Men / Women / Kids taxonomy set on the Add Items page.
         </p>
       </div>

@@ -14,8 +14,8 @@ const Reports = () => {
         </div>
         <p className='luxury-eyebrow text-luxury-rose text-xs mb-2'>COMING SOON</p>
         <p className='text-luxury-ivory/80 max-w-md mx-auto'>
-          Analytics and revenue reporting aren't built yet. Once there's real order history to draw
-          from, this is where you'll see sales trends, top products, and customer growth.
+          Analytics and revenue reporting aren&apos;t built yet. Once there&apos;s real order history to draw
+          from, this is where you&apos;ll see sales trends, top products, and customer growth.
         </p>
       </div>
     </div>

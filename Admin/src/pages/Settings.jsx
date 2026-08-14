@@ -15,7 +15,7 @@ const Settings = () => {
         </div>
         <p className='luxury-eyebrow text-luxury-rose text-xs mb-2'>COMING SOON</p>
         <p className='text-luxury-ivory/80 max-w-md mx-auto'>
-          Store-wide settings — admin credentials, payment provider keys, shipping rules — aren't
+          Store-wide settings — admin credentials, payment provider keys, shipping rules — aren&apos;t
           editable from here yet. For now, those live directly in <code className='text-luxury-gold/80'>Backend/.env</code>.
         </p>
       </div>
