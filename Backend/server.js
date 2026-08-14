@@ -14,8 +14,12 @@ const port = process.env.PORT || 4000;
 connectDB();
 connectCloudinary();
 
+const allowedOrigins = process.env.ALLOWED_ORIGINS
+  ? process.env.ALLOWED_ORIGINS.split(',').map((origin) => origin.trim())
+  : true; // no ALLOWED_ORIGINS set (e.g. local dev) -> allow all origins
+
 app.use(express.json());
-app.use(cors());
+app.use(cors({ origin: allowedOrigins }));
 
 app.use('/api/user', userRouter);
 app.use('/api/product', productRouter);
