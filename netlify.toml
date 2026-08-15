@@ -1,0 +1,16 @@
+[build]
+  command = "(cd frontend && npm install && npm run build) && (cd Admin && npm install && npm run build) && mkdir -p frontend/dist/admin && cp -r Admin/dist/. frontend/dist/admin/"
+  publish = "frontend/dist"
+
+# Admin panel lives under /admin on the same domain, built separately
+# with its own base path and served from the merged output above.
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+
+# Storefront handles everything else (client-side routing via React Router).
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
