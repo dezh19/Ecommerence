@@ -44,7 +44,7 @@ const Cart = () => {
                     <img className='w-16 sm:w-20' src={item.image} alt={item.name} />
                     <div className='text-xs sm:text-lg'>
                       <p className='font-medium'>{item.name}</p>
-                      <p>Size:<span className='border-none  bg-slate-100'> {item.size}</span></p>
+                      <p>Size: <span className='ml-1 px-2 py-0.5 rounded border border-luxury-gold/30 text-luxury-gold'>{item.size}</span></p>
                       <p >Price: {currency}{item.price}</p>
                     </div>
                   </div>

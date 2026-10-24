@@ -11,19 +11,19 @@ const ProductImages = () => {
   const [images, setImage] = useState('');
   const [size, setSize] = useState('');
 
+// Re-run when products finish loading, so opening or refreshing a
+// product link directly doesn't leave the page blank.
 const fetchProductData = useCallback(() => {
-  products.map((item) => {
-    if (item._id === productId) {
-      setProductData(item);
-      setImage(item.images[0]);
-      return null;
-    }
-  });
-}, [productId]);
+  const item = products.find((p) => p._id === productId);
+  if (item) {
+    setProductData(item);
+    setImage(item.images[0]);
+  }
+}, [productId, products]);
 
   useEffect(() => {
     fetchProductData();
-  }, [productId]);
+  }, [fetchProductData]);
 
   return productData ? (
     <div className='border-t-2 pt-10 transition-opacity ease-in duration-500 opacity-100'>
